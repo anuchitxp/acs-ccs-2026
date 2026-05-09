@@ -561,6 +561,10 @@ li strong { color: var(--text); }
     <div class="badge">● LIVE 2026</div>
     <h1>ACS & CCS<br>Resident Tutorial</h1>
     <p>Board Prep · 30 min · 5 Quizzes</p>
+    <p style="margin-top:0.5rem;font-size:0.72rem;color:var(--text2);line-height:1.4;">
+      ✍️ Dr.Anuchit Wongphen<br>
+      <span style="color:var(--text3);">Udonthani Hospital</span>
+    </p>
   </div>
 
   <div class="nav-section">
@@ -670,7 +674,7 @@ li strong { color: var(--text); }
             <tr><td><strong>Vascular access</strong></td><td>Radial &gt; Femoral → <strong>Class I</strong> (↓ bleeding, ↓ mortality)</td></tr>
             <tr><td><strong>Intravascular imaging</strong></td><td>IVUS/OCT during PCI → <strong>Class I</strong> (complex lesions)</td></tr>
             <tr><td><strong>Multivessel PCI</strong></td><td>Complete revascularization แนะนำใน STEMI + NSTE-ACS</td></tr>
-            <tr><td><strong>Cardiogenic shock</strong></td><td>❌ Routine unloading device ถ้า hemodynamically stable</td></tr>
+            <tr><td><strong>Cardiogenic shock</strong></td><td>❌ Routine LV unloading device(IABP/Impella) ถ้า hemodynamically stable</td></tr>
             <tr><td><strong>Lipid target</strong></td><td>LDL-C <strong>&lt; 55 mg/dL</strong> + add non-statin ถ้า LDL ≥ 70</td></tr>
             <tr><td><strong>Colchicine</strong></td><td>0.5 mg OD post-ACS → Class IIb (↓ MACE)</td></tr>
           </tbody>
@@ -928,12 +932,47 @@ Bleeding risk  ░░░░░░░░████████  ← สม่�
 
     <div id="af-acs">
       <h3>3.3 AF + ACS/Stent: Timeline</h3>
-      <div class="code-block"><pre>PCI Day     1 wk       1 mo          12 mo
-    │──────────│───────────│─────────────│────────►
-    │ Triple   │          Dual           │ OAC mono
-    │DOAC+ASA+ │      DOAC+Clopidogrel   │
-    │Clopidogrel│                        │
-    │ MAX 1 mo │                        │</pre></div>
+      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.5rem 1.75rem;margin:0.75rem 0;overflow-x:auto;">
+        <svg viewBox="0 0 720 160" xmlns="http://www.w3.org/2000/svg" style="width:100%;min-width:480px;font-family:'IBM Plex Mono',monospace;">
+
+          <!-- Timeline axis -->
+          <line x1="60" y1="56" x2="680" y2="56" stroke="#58a6ff" stroke-width="2"/>
+          <!-- Arrow head -->
+          <polygon points="680,50 695,56 680,62" fill="#58a6ff"/>
+
+          <!-- Tick marks -->
+          <line x1="60"  y1="48" x2="60"  y2="64" stroke="#58a6ff" stroke-width="2"/>
+          <line x1="180" y1="48" x2="180" y2="64" stroke="#8b949e" stroke-width="1.5"/>
+          <line x1="320" y1="48" x2="320" y2="64" stroke="#8b949e" stroke-width="1.5"/>
+          <line x1="540" y1="48" x2="540" y2="64" stroke="#8b949e" stroke-width="1.5"/>
+
+          <!-- Time labels -->
+          <text x="60"  y="36" text-anchor="middle" fill="#e6edf3" font-size="13" font-weight="600">PCI Day</text>
+          <text x="180" y="36" text-anchor="middle" fill="#8b949e" font-size="12">1 wk</text>
+          <text x="320" y="36" text-anchor="middle" fill="#8b949e" font-size="12">1 mo</text>
+          <text x="540" y="36" text-anchor="middle" fill="#8b949e" font-size="12">12 mo</text>
+
+          <!-- Phase 1: Triple (PCI Day → 1 wk, max to 1 mo) -->
+          <rect x="60" y="72" width="120" height="36" rx="6" fill="rgba(255,123,114,0.15)" stroke="#ff7b72" stroke-width="1.5"/>
+          <text x="120" y="87" text-anchor="middle" fill="#ff7b72" font-size="11" font-weight="700">Triple Rx</text>
+          <text x="120" y="101" text-anchor="middle" fill="#ff7b72" font-size="9.5">DOAC + ASA + Clopi</text>
+
+          <!-- Phase 2: Dual (1 wk → 12 mo) -->
+          <rect x="180" y="72" width="360" height="36" rx="6" fill="rgba(88,166,255,0.1)" stroke="#58a6ff" stroke-width="1.5"/>
+          <text x="360" y="87" text-anchor="middle" fill="#58a6ff" font-size="11" font-weight="700">Dual Rx</text>
+          <text x="360" y="101" text-anchor="middle" fill="#58a6ff" font-size="9.5">DOAC + Clopidogrel</text>
+
+          <!-- Phase 3: OAC mono (12 mo →) -->
+          <rect x="540" y="72" width="130" height="36" rx="6" fill="rgba(63,185,80,0.1)" stroke="#3fb950" stroke-width="1.5"/>
+          <text x="605" y="87" text-anchor="middle" fill="#3fb950" font-size="11" font-weight="700">OAC mono</text>
+          <text x="605" y="101" text-anchor="middle" fill="#3fb950" font-size="9.5">DOAC only</text>
+
+          <!-- Note: MAX 1 mo for triple -->
+          <text x="120" y="128" text-anchor="middle" fill="#ffa657" font-size="9" font-style="italic">MAX 1 mo</text>
+          <text x="120" y="140" text-anchor="middle" fill="#ffa657" font-size="9" font-style="italic">(often D/C at discharge)</text>
+
+        </svg>
+      </div>
       <h4>กฎที่ต้องจำ</h4>
       <ol>
         <li><strong>Triple therapy ≤ 1 เดือน</strong> (ส่วนใหญ่ stop ที่ discharge = 1–7 วัน)</li>
